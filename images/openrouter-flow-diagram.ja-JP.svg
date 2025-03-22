@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+    <!-- スタイル定義 -->
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+        </marker>
+    </defs>
+    
+    <!-- 背景 -->
+    <rect width="1200" height="600" fill="#f8f9fa" />
+    
+    <!-- タイトル -->
+    <text x="600" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">OpenRouter APIチャットプログラムのフロー図</text>
+    
+    <!-- プログラム初期化セクション -->
+    <rect x="70" y="80" width="200" height="70" rx="10" fill="#e6f7ff" stroke="#1890ff" stroke-width="2" />
+    <text x="170" y="115" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">1. 環境変数のロード</text>
+    <text x="170" y="135" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">APIキーとモデル名を取得</text>
+    
+    <rect x="320" y="80" width="200" height="70" rx="10" fill="#f6ffed" stroke="#52c41a" stroke-width="2" />
+    <text x="420" y="115" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">2. 環境変数のチェック</text>
+    <text x="420" y="135" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">APIキーとモデル名を検証</text>
+    
+    <rect x="570" y="80" width="200" height="70" rx="10" fill="#fff7e6" stroke="#fa8c16" stroke-width="2" />
+    <text x="670" y="115" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">3. APIヘッダーの設定</text>
+    <text x="670" y="135" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">認証とコンテンツタイプを設定</text>
+    
+    <rect x="820" y="80" width="200" height="70" rx="10" fill="#f9f0ff" stroke="#722ed1" stroke-width="2" />
+    <text x="920" y="115" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">4. main()関数の開始</text>
+    <text x="920" y="135" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">会話履歴の初期化</text>
+    
+    <!-- メイン会話ループ - 左側 -->
+    <rect x="70" y="230" width="170" height="60" rx="10" fill="#fff2f0" stroke="#f5222d" stroke-width="2" />
+    <text x="155" y="260" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">5. ユーザー入力の取得</text>
+    <text x="155" y="280" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">テキスト入力を収集</text>
+    
+    <rect x="290" y="230" width="170" height="60" rx="10" fill="#fff2f0" stroke="#f5222d" stroke-width="2" />
+    <text x="375" y="260" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">6. 終了コマンドの確認</text>
+    <text x="375" y="280" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">'exit', 'quit', 'end'をチェック</text>
+    
+    <rect x="510" y="230" width="170" height="60" rx="10" fill="#fff2f0" stroke="#f5222d" stroke-width="2" />
+    <text x="595" y="260" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">7. ユーザーメッセージ追加</text>
+    <text x="595" y="280" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">会話履歴に追加</text>
+    
+    <!-- APIセクション - 中央 -->
+    <rect x="770" y="220" width="200" height="80" rx="10" fill="#e6fffb" stroke="#13c2c2" stroke-width="2" />
+    <text x="870" y="250" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">8. chat_with_model関数</text>
+    <text x="870" y="270" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">APIリクエストの構築</text>
+    <text x="870" y="290" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">OpenRouter APIへ送信</text>
+    
+    <rect x="770" y="350" width="200" height="60" rx="10" fill="#f0f5ff" stroke="#2f54eb" stroke-width="2" />
+    <text x="870" y="380" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">OpenRouter API</text>
+    <text x="870" y="400" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">外部APIエンドポイント</text>
+    
+    <!-- メイン会話ループ - 右側 -->
+    <rect x="510" y="450" width="170" height="60" rx="10" fill="#fff2f0" stroke="#f5222d" stroke-width="2" />
+    <text x="595" y="480" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">9. モデル応答の表示</text>
+    <text x="595" y="500" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">アシスタントの回答を表示</text>
+    
+    <rect x="290" y="450" width="170" height="60" rx="10" fill="#fff2f0" stroke="#f5222d" stroke-width="2" />
+    <text x="375" y="480" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">10. アシスタント応答の追加</text>
+    <text x="375" y="500" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">会話履歴に保存</text>
+    
+    <!-- セットアップフェーズの接続線と矢印 -->
+    <line x1="270" y1="115" x2="320" y2="115" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
+    <line x1="520" y1="115" x2="570" y2="115" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
+    <line x1="770" y1="115" x2="820" y2="115" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
+    
+    <!-- セットアップから会話ループへの接続 -->
+    <path d="M 920 150 L 920 180 L 155 180 L 155 230" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+    
+    <!-- 会話ループの接続 -->
+    <line x1="240" y1="260" x2="290" y2="260" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
+    <line x1="460" y1="260" x2="510" y2="260" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
+    <line x1="680" y1="260" x2="770" y2="260" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
+    
+    <!-- API接続 -->
+    <line x1="870" y1="300" x2="870" y2="350" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
+    
+    <!-- 戻りパス -->
+    <path d="M 870 410 L 870 480 L 680 480" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+    <line x1="510" y1="480" x2="460" y2="480" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
+    
+    <!-- ループバック -->
+    <path d="M 290 480 L 155 480 L 155 290" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+    
+    <!-- 凡例 -->
+    <text x="1030" y="180" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="start">色の凡例</text>
+    
+    <!-- 凡例アイテム -->
+    <rect x="1030" y="200" width="20" height="20" fill="#e6f7ff" stroke="#1890ff" stroke-width="1" />
+    <text x="1060" y="215" font-family="Arial, sans-serif" font-size="14" text-anchor="start">プログラム初期化</text>
+    
+    <rect x="1030" y="230" width="20" height="20" fill="#f6ffed" stroke="#52c41a" stroke-width="1" />
+    <text x="1060" y="245" font-family="Arial, sans-serif" font-size="14" text-anchor="start">検証処理</text>
+    
+    <rect x="1030" y="260" width="20" height="20" fill="#fff7e6" stroke="#fa8c16" stroke-width="1" />
+    <text x="1060" y="275" font-family="Arial, sans-serif" font-size="14" text-anchor="start">設定処理</text>
+    
+    <rect x="1030" y="290" width="20" height="20" fill="#f9f0ff" stroke="#722ed1" stroke-width="1" />
+    <text x="1060" y="305" font-family="Arial, sans-serif" font-size="14" text-anchor="start">プログラムエントリー</text>
+    
+    <rect x="1030" y="320" width="20" height="20" fill="#fff2f0" stroke="#f5222d" stroke-width="1" />
+    <text x="1060" y="335" font-family="Arial, sans-serif" font-size="14" text-anchor="start">メイン会話ループ</text>
+    
+    <rect x="1030" y="350" width="20" height="20" fill="#e6fffb" stroke="#13c2c2" stroke-width="1" />
+    <text x="1060" y="365" font-family="Arial, sans-serif" font-size="14" text-anchor="start">API関数</text>
+    
+    <rect x="1030" y="380" width="20" height="20" fill="#f0f5ff" stroke="#2f54eb" stroke-width="1" />
+    <text x="1060" y="395" font-family="Arial, sans-serif" font-size="14" text-anchor="start">外部API</text>
+</svg>
